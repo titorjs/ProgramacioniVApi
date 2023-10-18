@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Controllers",
+    "\\Properties"
   ],
-  "SelectedNode": "\\ProgramacionIVAPI.sln",
+  "SelectedNode": "\\Controllers\\ProductoController.cs",
   "PreviewInSolutionExplorer": false
 }

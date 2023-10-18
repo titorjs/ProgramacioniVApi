@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProgramacionIVAPI;
 
@@ -10,9 +11,11 @@ using ProgramacionIVAPI;
 namespace ProgramacionIVAPI.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231016122008_incremental")]
+    partial class incremental
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,29 +46,6 @@ namespace ProgramacionIVAPI.Migrations
                     b.HasKey("IdProducto");
 
                     b.ToTable("Producto");
-
-                    b.HasData(
-                        new
-                        {
-                            IdProducto = 1,
-                            Cantidad = 23,
-                            Descripcion = "D1",
-                            Nombre = "P1"
-                        },
-                        new
-                        {
-                            IdProducto = 2,
-                            Cantidad = 12,
-                            Descripcion = "D2",
-                            Nombre = "P2"
-                        },
-                        new
-                        {
-                            IdProducto = 4,
-                            Cantidad = 76,
-                            Descripcion = "D3",
-                            Nombre = "P3"
-                        });
                 });
 #pragma warning restore 612, 618
         }

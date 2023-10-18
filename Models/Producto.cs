@@ -1,11 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProgramacionIV.Models
 {
     public class Producto
     {
         [Key]
-        public int IdProducto { get; set; }
+		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		public int IdProducto { get; set; }
         [Required]
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
